@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 2024年10月24日更新内容：修改供电模式，功耗降低。修正RGB供电自动关闭的功能。如果您的键盘于10月24日之前更新，请更新最新的固件。
 Update on October 24, 2024: Modified power supply mode to reduce power consumption. Corrected the function of automatic shutdown of RGB power supply. If your keyboard is updated before October 24th, please update the latest firmware.
 
@@ -11,13 +12,19 @@ If you need the 3D printed model file or if there are any abnormalities with the
 
 =======
 # 睫毛外设 (Eyelash Peripherals) Corne ZMK Repository
+=======
+2024年10月24日更新内容：修改供电模式，功耗降低。修正RGB供电自动关闭的功能。如果您的键盘于10月24日之前更新，请更新最新的固件。
+Update on October 24, 2024: Modified power supply mode to reduce power consumption. Corrected the function of automatic shutdown of RGB power supply. If your keyboard is updated before October 24th, please update the latest firmware.
+>>>>>>> dc0416c (solfe)
 
-**This keyboard is not the same as [foostan's Corne](https://github.com/foostan/crkbd). It will not work with standard `corne` firmware.**
+如需3D打印的模型文件或者键盘有任何异常和故障，请联系380465425@qq.com
+If you need the 3D printed model file or if there are any abnormalities with the keyboard, please contact 380465425@qq.com
+# zmk-config-sofle
 
-![Photo of Eyelash Peripherals Corne](https://ae01.alicdn.com/kf/Sa797fee25edd44248fbfdb0e13d44e00B.jpg)
 
-If you need a 3D model of this keyboard, email `380465425@qq.com`.
+<img src="keymap-drawer/sofle.svg" >
 
+<<<<<<< HEAD
 ## Instructions
 
 1. [Fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository).
@@ -55,3 +62,5 @@ index ac30a68..70ad540 100644
      path: config
 ```
 >>>>>>> 913ba43 (go)
+=======
+>>>>>>> dc0416c (solfe)
