@@ -41,6 +41,29 @@
         tap-ms = <30>;
     };
 
+    macros {
+        WIN_NEXT_TAB: WIN {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&macro_tap_time 3>, <&kp TAB>;
+
+            label = "WIN";
+        };
+
+        WIN_PREV_TAB: WIN_NPREV_TAB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LCTRL>,
+                <&macro_tap_time 3>,
+                <&kp TAB>,
+                <&macro_tap_time 3>,
+                <&kp LSHIFT>;
+
+            label = "WIN_NPREV_TAB";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -106,6 +129,18 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+        };
+
+        win_cus_km {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "WIN_CUS_KM";
         };
     };
 };
