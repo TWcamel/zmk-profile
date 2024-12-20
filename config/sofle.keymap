@@ -56,6 +56,7 @@
         };
 
         light_km {
+            display-name = "LIG";
             bindings = <
 &trans      &trans           &trans          &trans           &trans           &trans             &mmv MOVE_UP     &trans           &trans           &trans        &trans     &trans  &trans
 &trans      &trans           &trans          &trans           &trans           &trans             &mmv MOVE_DOWN   &trans           &trans           &trans        &trans     &trans  &trans
@@ -63,13 +64,10 @@
 &trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans        &trans     &trans  &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans        &trans     &trans
             >;
-
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "LIG";
-            label = "LIGHT_KM";
         };
 
         sytem_km {
+            display-name = "SYS";
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans    &trans    &trans        &trans     &out OUT_TOG  &trans
 &trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &trans  &trans    &trans    &trans        &trans     &trans        &trans
@@ -77,13 +75,10 @@
 &trans  &sys_reset    &trans          &bootloader   &trans        &trans          &trans  &trans    &trans    &sys_reset    &soft_off  &bootloader   &trans
 &trans  &trans        &trans          &trans        &trans        &trans          &trans  &trans    &trans    &trans        &trans     &trans
             >;
-
-            display-name = "SYS";
-            sensor-bindings = <&scroll_encoder>;
-            label = "SYS_KM";
         };
 
         function_km {
+            display-name = "FUN";
             bindings = <
 &kp F1          &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &trans  &kp F7    &kp F8    &kp F9        &kp F10    &kp F11  &kp F12
 &kp CAPS        &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans   &trans
@@ -91,9 +86,6 @@
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans   &trans
 &trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans
             >;
-
-            display-name = "FUN";
-            label = "FUN_KM";
         };
 
         W_C {
@@ -104,7 +96,6 @@
 &kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &to 5
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
             display-name = "W_C";
             label = "WIN_CUS_KM";
         };
