@@ -1,9 +1,12 @@
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -38,33 +41,10 @@
         tap-ms = <30>;
     };
 
-    macros {
-        WIN_NEXT_TAB: WIN {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&macro_tap_time 3>, <&kp TAB>;
-
-            label = "WIN";
-        };
-
-        WIN_PREV_TAB: WIN_NPREV_TAB {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LCTRL>,
-                <&macro_tap_time 3>,
-                <&kp TAB>,
-                <&macro_tap_time 3>,
-                <&kp LSHIFT>;
-
-            label = "WIN_NPREV_TAB";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        win_km {
+        WIN {
             bindings = <
 &lt 4 ESC   &kp N1     &kp N2        &kp N3        &kp N4       &kp N5         &kp UP_ARROW     &kp N6       &kp N7       &kp N8      &kp N9              &kp N0               &kp GRAVE
 &kp TAB     &kp Q      &kp W         &kp E         &kp R        &kp T          &kp DOWN_ARROW   &kp Y        &kp U        &kp I       &kp O               &kp P                &kp BACKSPACE
@@ -121,14 +101,14 @@
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LC(PAGE_UP)    &kp LS(LC(PAGE_UP))    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &to 5
+&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &tog 5
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "WIN_CUS_KM";
         };
 
-        mac_km {
+        MAC {
             display-name = "WIN_KM";
             bindings = <
 &lt 6 ESC     &kp N1     &kp N2        &kp N3        &kp N4       &kp N5         &kp UP_ARROW     &kp N6       &kp N7       &kp N8      &kp N9              &kp N0               &kp GRAVE
@@ -148,7 +128,7 @@
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LC(PAGE_UP)    &kp LS(LC(PAGE_UP))    &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &to 0
+&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &tog 0
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
