@@ -51,7 +51,7 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "WIN_KM";
+            display-name = "WIN";
             label = "⊞";
         };
 
@@ -64,8 +64,9 @@
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans        &trans     &trans
             >;
 
-            display-name = "LIGHT_KM";
             sensor-bindings = <&scroll_encoder>;
+            display-name = "LIG";
+            label = "LIGHT_KM";
         };
 
         sytem_km {
@@ -77,6 +78,7 @@
 &trans  &trans        &trans          &trans        &trans        &trans          &trans  &trans    &trans    &trans        &trans     &trans
             >;
 
+            display-name = "SYS";
             sensor-bindings = <&scroll_encoder>;
             label = "SYS_KM";
         };
@@ -90,6 +92,7 @@
 &trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans
             >;
 
+            display-name = "FUN";
             label = "FUN_KM";
         };
 
@@ -102,11 +105,12 @@
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
+            display-name = "W_C";
             label = "WIN_CUS_KM";
         };
 
         MAC {
-            display-name = "WIN_KM";
+            display-name = "MAC";
             bindings = <
 &lt 6 ESC     &kp N1     &kp N2        &kp N3        &kp N4       &kp N5         &kp UP_ARROW     &kp N6       &kp N7       &kp N8      &kp N9              &kp N0               &kp GRAVE
 &kp TAB       &kp Q      &kp W         &kp E         &kp R        &kp T          &kp DOWN_ARROW   &kp Y        &kp U        &kp I       &kp O               &kp P                &kp BACKSPACE
@@ -120,7 +124,7 @@
         };
 
         M_C {
-            label = "MAC_CUS_KM";
+            label = "M_C";
             bindings = <
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans             &trans                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
