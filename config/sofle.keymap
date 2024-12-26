@@ -4,6 +4,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -43,11 +46,11 @@
 
         WIN {
             bindings = <
-&lt 1 ESC   &kp N1     &kp N2        &kp N3        &kp N4       &kp N5         &kp LA(PAGE_UP)  &kp N6       &kp N7       &kp N8       &kp N9              &kp N0               &kp GRAVE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R        &kp T          &kp PAGE_DOWN    &kp Y        &kp U        &kp I        &kp O               &kp P                &kp BACKSPACE
-&kp LCTRL   &kp A      &kp S         &kp D         &kp F        &kp G          &kp HOME         &kp H        &kp J        &kp K        &kp L               &kp SEMI             &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V        &kp B          &kp END          &kp N        &kp M        &kp COMMA    &kp DOT             &kp FSLH             &kp DEL
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 SPACE  &lt 5 ENTER    &kp F1           &lt 6 ENTER  &lt 4 MINUS  &lt 5 EQUAL  &lt 6 LEFT_BRACKET  &lt 1 RIGHT_BRACKET
+&lt 1 ESC   &kp N1     &kp N2        &kp N3        &kp N4       &kp N5             &kp LA(PAGE_UP)  &kp N6       &kp N7       &kp N8       &kp N9              &kp N0               &kp GRAVE
+&kp TAB     &kp Q      &kp W         &kp E         &kp R        &kp T              &kp PAGE_DOWN    &kp Y        &kp U        &kp I        &kp O               &kp P                &kp BACKSPACE
+&kp LCTRL   &kp A      &kp S         &kp D         &kp F        &kp G              &kp HOME         &kp H        &kp J        &kp K        &kp L               &kp SEMI             &kp APOS
+&kp LSHFT   &kp Z      &kp X         &kp C         &kp V        &kp B              &kp END          &kp N        &kp M        &kp COMMA    &kp DOT             &kp FSLH             &kp DEL
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 SPACE  &lt 5 BACKSLASH    &kp F1           &lt 6 ENTER  &lt 4 MINUS  &lt 5 EQUAL  &lt 6 LEFT_BRACKET  &lt 1 RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -71,11 +74,11 @@
         MAC {
             display-name = "MAC";
             bindings = <
-&lt 3 ESC     &kp N1     &kp N2        &kp N3        &kp N4       &kp N5         &kp PAGE_UP               &kp N6       &kp N7       &kp N8       &kp N9              &kp N0               &kp GRAVE
-&kp TAB       &kp Q      &kp W         &kp E         &kp R        &kp T          &kp PAGE_DOWN             &kp Y        &kp U        &kp I        &kp O               &kp P                &kp BACKSPACE
-&kp LEFT_ALT  &kp A      &kp S         &kp D         &kp F        &kp G          &kp HOME                  &kp H        &kp J        &kp K        &kp L               &kp SEMI             &kp APOS
-&kp LSHFT     &kp Z      &kp X         &kp C         &kp V        &kp B          &kp END                   &kp N        &kp M        &kp COMMA    &kp DOT             &kp FSLH             &kp DELETE
-&kp C_MUTE    &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 6 SPACE  &lt 5 ENTER    &kp LC(LG(LS(NUMBER_4)))  &lt 6 ENTER  &lt 4 MINUS  &lt 5 EQUAL  &lt 6 LEFT_BRACKET  &lt 3 RIGHT_BRACKET
+&lt 3 ESC     &kp N1     &kp N2        &kp N3        &kp N4       &kp N5             &kp PAGE_UP               &kp N6       &kp N7       &kp N8       &kp N9              &kp N0               &kp GRAVE
+&kp TAB       &kp Q      &kp W         &kp E         &kp R        &kp T              &kp PAGE_DOWN             &kp Y        &kp U        &kp I        &kp O               &kp P                &kp BACKSPACE
+&kp LEFT_ALT  &kp A      &kp S         &kp D         &kp F        &kp G              &kp HOME                  &kp H        &kp J        &kp K        &kp L               &kp SEMI             &kp APOS
+&kp LSHFT     &kp Z      &kp X         &kp C         &kp V        &kp B              &kp END                   &kp N        &kp M        &kp COMMA    &kp DOT             &kp FSLH             &kp DELETE
+&kp C_MUTE    &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 6 SPACE  &lt 5 BACKSLASH    &kp LC(LG(LS(NUMBER_4)))  &lt 6 ENTER  &lt 4 MINUS  &lt 5 EQUAL  &lt 6 LEFT_BRACKET  &lt 3 RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -123,16 +126,6 @@
 &trans          &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans   &trans
 &kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans   &trans
 &trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans        &trans     &trans
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
